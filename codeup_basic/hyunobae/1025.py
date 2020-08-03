@@ -1,0 +1,6 @@
+number=input()
+print("[{}]".format(str(number[0])+str(0)*4))
+print("[{}]".format(str(number[1])+str(0)*3))
+print("[{}]".format(str(number[2])+str(0)*2))
+print("[{}]".format(str(number[3])+str(0)*1))
+print("[{}]".format(str(number[4])))
