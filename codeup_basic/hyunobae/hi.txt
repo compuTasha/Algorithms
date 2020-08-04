@@ -1,0 +1,17 @@
+luna-send -n 1 -f -m com.palm.configurator luna://com.webos.service.db/putKind '{"id":"com.webos.store:1","owner":"com.webos.store","schema":{"type":"object","properties":{"product":{ "type":"string"},"count":{ "type":"number"}}},"indexes":[{
+"name":"proDuct","props":[{"name":"product"}]},{"name":"available","props":[{"name":"count"}]}]}'
+
+luna-send -n 1 -f -m com.palm.configurator luna://com.webos.service.db/put '{"objects":[{"product":"milk","available":"15","_kind":"com.webos.store:1"}]}'
+luna-send -n 1 -f -m com.palm.configurator luna://com.webos.service.db/put '{"objects":[{"product":"cookie","available":"30","_kind":"com.webos.store:1"}]}'
+luna-send -n 1 -f -m com.palm.configurator luna://com.webos.service.db/put '{"objects":[{"product":"rice","available":"23","_kind":"com.webos.store:1"}]}'
+luna-send -n 1 -f -m com.palm.configurator luna://com.webos.service.db/put '{"objects":[{"product":"hotdog","available":"5","_kind":"com.webos.store:1"}]}'
+luna-send -n 1 -f -m com.palm.configurator luna://com.webos.service.db/put '{"objects":[{"product":"chicken","available":"7","_kind":"com.webos.store:1"}]}'
+
+
+
+luna-send -n 1 -f -m com.palm.configurator luna://com.webos.service.db/get '{"ids":["Lg1FeFguvvo”]}'
+
+luna-send -n 1 -f -m com.palm.configurator luna://com.webos.service.db/search '{"query":{"where":[{"op":"=","val":"milk","prop":"product"}],"from":"com.webos.store:1"}}'
+//milk 찾기
+
+luna-send -n 1 -f -m com.palm.configurator luna://com.webos.service.db/search '{"query":{"where":[{"op":"=","val":"hotdog","prop":"product"}],"from":"com.webos.store:1"}}'
