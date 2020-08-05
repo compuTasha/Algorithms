@@ -1,0 +1,5 @@
+grade = input()
+if grade>=90:print("A")
+elif grade>=70 and grade<80:print("B")
+elif grade>=40 and grade<70:print("C")
+else: print("D")
